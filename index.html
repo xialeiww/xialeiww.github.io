@@ -32,7 +32,7 @@
 	    // second / 3600 一共的小时数 /24 天数
 	    var d = parseInt(second / 3600 / 24); //天数
 	    //console.log(d);
-	    var h = parseInt(second / 3600 % 24) // 小时
+	    var h = parseInt(second / 3600 ) // 小时
 	    // console.log(h);
 	    var m = parseInt(second / 60 );
 	    //console.log(m);
@@ -46,7 +46,7 @@
 	    h<10 ? h="0"+h : h;
 	    m<10 ? m="0"+m : m;
 	    s<10 ? s="0"+s : s;
-	    demo.innerHTML = "距离下一次相见: "+d+"天 "+h+"小时 "+m+"分钟 "+s+"秒";
+	    demo.innerHTML = "距离下一次相见: "+d+"天 "+"<br/>"+h+"小时 "+"<br/>"+m+"分钟 "+"<br/>"+s+"秒";
  
 	   }
 	  }
