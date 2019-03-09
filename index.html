@@ -32,10 +32,13 @@
 	    // second / 3600 一共的小时数 /24 天数
 	    var d = parseInt(second / 3600 / 24); //天数
 	    //console.log(d);
+	    second = second - d * 3600 * 24;
 	    var h = parseInt(second / 3600 ) // 小时
 	    // console.log(h);
+	    second = second - h * 3600;
 	    var m = parseInt(second / 60 );
 	    //console.log(m);
+	    second = second - m * 60;
 	    var s = parseInt(second ); // 当前的秒
 	    console.log(s);
 	    /* if(d<10)
