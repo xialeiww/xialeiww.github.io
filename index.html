@@ -11,6 +11,12 @@
 			margin:0 auto;
 			
 		}
+		h3{
+			font-size:50px;
+			text-align:center;
+			width:320;
+			margin:0 auto;
+		}
 		#demo{
 			text-align:center;
 			color:red;
@@ -20,6 +26,12 @@
 	<script>
 	  window.onload = function(){
 	   var demo = document.getElementById("demo");
+	    var cuole = document.getElementById("cuole");
+		var cuo = "<h3>爽爽我错了，我不应该看低俗的视频,我以后要做个高尚的人！</h3>";
+		for(var i = 0; i < 10000;i++){
+			cuo += "<h3>爽爽我错了，我不应该看低俗的视频,我以后要做个高尚的人！</h3>";
+		}
+		  cuole.innerHTML = cuo;
 	   var endTime = new Date("2019/4/5 7:25:00"); // 最终时间
 	   setInterval(clock,1000); // 开启定时器
 	   function clock(){
@@ -50,23 +62,13 @@
 	    m<10 ? m="0"+m : m;
 	    s<10 ? s="0"+s : s;
 	    demo.innerHTML = "距离下一次相见还有: "+"<br/>"+~~d+"&nbsp;天"+"<br/>"+~~h+"&nbsp;时 "+"<br/>"+~~m+"&nbsp;分 "+"<br/>"+~~s+"&nbsp;秒";
- 
+ 		
 	   }
 	  }
  	</script>
 </head>
 <body>
-	<h1>翟</h1>
-	<h1>爽</h1>
-	<h1>,</h1>
-	<h1>你</h1>
-	<h1>怎</h1>		
-	<h1>么</h1>
-	<h1>辣</h1>
-	<h1>么</h1>
-	<h1>可</h1>
-	<h1>爱</h1>
-	<h1>？</h1>
+	<div id = "cuole"></div>		
 	<div id="demo"></div>
 </body>
 </html>
