@@ -18,20 +18,15 @@
 			margin:0 auto;
 		}
 		#demo{
+			margin-top: 100px;
 			text-align:center;
-			color:red;
+			color:black;
 			font-size: 50px;
 		}
 	</style>
 	<script>
 	  window.onload = function(){
 	   var demo = document.getElementById("demo");
-	    var cuole = document.getElementById("cuole");
-		var cuo = "<h3>爽爽我错了，我不应该看低俗的视频,我以后要做个高尚的人！</h3>";
-		for(var i = 0; i < 10000;i++){
-			cuo += "<h3>爽爽我错了，我不应该看低俗的视频,我以后要做个高尚的人！</h3>";
-		}
-		  cuole.innerHTML = cuo;
 	   var endTime = new Date("2019/4/5 7:25:00"); // 最终时间
 	   setInterval(clock,1000); // 开启定时器
 	   function clock(){
@@ -68,7 +63,7 @@
  	</script>
 </head>
 <body>
-	<div id = "cuole"></div>		
+			
 	<div id="demo"></div>
 </body>
 </html>
