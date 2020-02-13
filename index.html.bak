@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>xl❤zs</title>
+	<style>
+		h1{
+			font-size:100px;
+			text-align:center;
+			width:320;
+			margin:0 auto;
+			
+		}
+		h3{
+			font-size:50px;
+			text-align:center;
+			width:320;
+			margin:0 auto;
+		}
+		#demo{
+			margin-top: 100px;
+			text-align:center;
+			color:black;
+			font-size: 50px;
+		}
+	</style>
+	<script>
+	  window.onload = function(){
+	   var demo = document.getElementById("demo");
+	   var endTime = new Date("2019/2/11 20:00:00"); // 最终时间
+	   setInterval(clock,1000); // 开启定时器
+	   function clock(){
+	    var nowTime = new Date(); // 一定是要获取最新的时间
+	    // console.log(nowTime.getTime()); 获得自己的毫秒
+	    var second = parseInt((nowTime.getTime() - endTime.getTime()) / 1000);
+	    // 用将来的时间毫秒 - 现在的毫秒 / 1000 得到的 还剩下的秒 可能处不断 取整
+	    // console.log(second);
+	     // 一小时 3600 秒
+	    // second / 3600 一共的小时数 /24 天数
+	    var d = parseInt(second / 3600 / 24); //天数
+	    //console.log(d);
+	    second = second - d * 3600 * 24;
+	    var h = parseInt(second / 3600 ) // 小时
+	    // console.log(h);
+	    second = second - h * 3600;
+	    var m = parseInt(second / 60 );
+	    //console.log(m);
+	    second = second - m * 60;
+	    var s = parseInt(second ); // 当前的秒
+	    console.log(s);
+	    /* if(d<10)
+	    {
+	     d = "0" + d;
+	    }*/
+	    d<10 ? d="0"+d : d;
+	    h<10 ? h="0"+h : h;
+	    m<10 ? m="0"+m : m;
+	    s<10 ? s="0"+s : s;
+	    demo.innerHTML = "亲爱的爽我们已经相爱了: "+"<br/>"+~~d+"&nbsp;天&nbsp;"+~~h+"&nbsp;时&nbsp;"+~~m+"&nbsp;分&nbsp;"+~~s+"&nbsp;秒了" + "<br/>"
+		   +"未来，我们要继续相爱哦！" + "<br/>" + "加油！";
+ 		
+	   }
+	  }
+	 </script>
+	 <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	 <style>
+		 .pic{
+			 margin: 0 auto;
+			 /* width: 960px; */
+			 text-align: center;
+			 
+		 }
+	 </style>
+</head>
+<body>
+			
+	<!-- <div id="demo"></div> -->
+	<!-- <ol class="breadcrumb">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Library</a></li>
+		<li class="active">Data</li>
+	  </ol> -->
+	<div class="pic" id="demo">
+		
+	</div>
+</body>
+
+</html>

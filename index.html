@@ -1,93 +1,262 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>xl❤zs</title>
-	<style>
-		h1{
-			font-size:100px;
-			text-align:center;
-			width:320;
-			margin:0 auto;
-			
-		}
-		h3{
-			font-size:50px;
-			text-align:center;
-			width:320;
-			margin:0 auto;
-		}
-		#demo{
-			margin-top: 100px;
-			text-align:center;
-			color:black;
-			font-size: 50px;
-		}
-	</style>
-	<script>
-	  window.onload = function(){
-	   var demo = document.getElementById("demo");
-	   var endTime = new Date("2019/2/11 20:00:00"); // 最终时间
-	   setInterval(clock,1000); // 开启定时器
-	   function clock(){
-	    var nowTime = new Date(); // 一定是要获取最新的时间
-	    // console.log(nowTime.getTime()); 获得自己的毫秒
-	    var second = parseInt((nowTime.getTime() - endTime.getTime()) / 1000);
-	    // 用将来的时间毫秒 - 现在的毫秒 / 1000 得到的 还剩下的秒 可能处不断 取整
-	    // console.log(second);
-	     // 一小时 3600 秒
-	    // second / 3600 一共的小时数 /24 天数
-	    var d = parseInt(second / 3600 / 24); //天数
-	    //console.log(d);
-	    second = second - d * 3600 * 24;
-	    var h = parseInt(second / 3600 ) // 小时
-	    // console.log(h);
-	    second = second - h * 3600;
-	    var m = parseInt(second / 60 );
-	    //console.log(m);
-	    second = second - m * 60;
-	    var s = parseInt(second ); // 当前的秒
-	    console.log(s);
-	    /* if(d<10)
-	    {
-	     d = "0" + d;
-	    }*/
-	    d<10 ? d="0"+d : d;
-	    h<10 ? h="0"+h : h;
-	    m<10 ? m="0"+m : m;
-	    s<10 ? s="0"+s : s;
-	    demo.innerHTML = "亲爱的爽我们已经相爱了: "+"<br/>"+~~d+"&nbsp;天&nbsp;"+~~h+"&nbsp;时&nbsp;"+~~m+"&nbsp;分&nbsp;"+~~s+"&nbsp;秒了" + "<br/>"
-		   +"未来，我们要继续相爱哦！" + "<br/>" + "加油！";
- 		
-	   }
-	  }
-	 </script>
-	 <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-	 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<html lang="zh-cn" class="no-js">
+	<head>
+		<meta http-equiv="Content-Type">
+		<meta content="text/html; charset=utf-8">
+		<meta charset="utf-8">
+		<title>xl❤zs</title>		
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="email=no">
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/animations.css" />
+		<script src="js/zepto.min.js"></script>
+		<script src="js/touch.js"></script>
+		<script src="js/music.js"></script>
+		<script src="js/index.js"></script>
+	</head>
+	<body>
+		<div>
+			<div class="page page-1-1 page-current">
+				<div class="wrap">
+					<img class="img_1 pt-page-moveFromTop" src="img/cover.jpg" />
+					<img class="img_2 pt-page-moveFromBottom" src="img/cover_title.png" />
+					<img class="icon_up pt-page-moveIconUp" src="img/icon_up.png" />
+<!--					<h2 >V4.6.5&nbsp;&nbsp;&nbsp;T15.2.3</h2>-->
+				</div>
+			</div>
+			<!--迪士尼之旅-->
+			<div class="page page-2-1 hide">
+				<div class="wrap">
+					<img class="img_wording hide pt-page-moveFromRight title" src="img/dishini.png" />
+<!--					<img class="img_circle hide pt-page-moveCircle" src="img/circle.png" />-->
+					<img class="img_people hide pt-page-moveFromLeft" src="img/2-1-9.jpg" />
 
-	<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-	 <style>
-		 .pic{
-			 margin: 0 auto;
-			 /* width: 960px; */
-			 text-align: center;
-			 
-		 }
-	 </style>
-</head>
-<body>
-			
-	<!-- <div id="demo"></div> -->
-	<!-- <ol class="breadcrumb">
-		<li><a href="#">Home</a></li>
-		<li><a href="#">Library</a></li>
-		<li class="active">Data</li>
-	  </ol> -->
-	<div class="pic" id="demo">
-		
-	</div>
-</body>
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+<!--					<img class="img_floating hide pt-page-scaleUp" src="img/floating_develop.png" />-->
+				</div>
+			</div>
+			<div class="page page-2-2 zi hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/2-1-1.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" id="text-1" contenteditable="true">骑在旋转木马上的美少女</p>
+				</div>
+			</div>
+			<div class="page page-2-3 zi hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/2-1-2.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" id="text-2" contenteditable="true">帅哥和靓女</p>
+				</div>
+			</div>
+			<div class="page page-2-4 zi hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/2-1-3.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">我靠在爽爽的肩膀上<br/>(*￣︶￣)</p>
+				</div>
+			</div>
+			<div class="page page-2-5 zi hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/2-1-4.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">想要上台表演的爽爽</p>
+				</div>
+			</div>
 
+			<div class="page page-2-6 zi hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/2-1-5.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">创急速光轮，我觉得好刺激，爽爽却觉得很简单╮(╯▽╰)╭</p>
+				</div>
+			</div>
+			<div class="page page-2-7 zi hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/2-1-6.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">下雪啦（拍的有点糊，不好意思ૢ˃ꌂ˂ૢ）</p>
+				</div>
+			</div>
+
+			<div class="page page-2-8 zi hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/2-1-7.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">最后的烟火表演，快乐的一天结束啦</p>
+				</div>
+			</div>
+
+			<!--重庆之旅-->
+			<div class="page page-3-1 cheng hide">
+				<div class="wrap">
+					<img class="img_wording hide pt-page-moveFromRight title" src="img/chongqing.png" />
+					<!--					<img class="img_circle hide pt-page-moveCircle" src="img/circle.png" />-->
+					<img class="img_people hide pt-page-moveFromLeft" src="img/3-1-1.jpg" />
+
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<!--					<img class="img_floating hide pt-page-scaleUp" src="img/floating_develop.png" />-->
+				</div>
+			</div>
+			<div class="page page-3-2 cheng hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/3-1-2.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">爱拍照的小女孩</p>
+				</div>
+			</div>
+			<div class="page page-3-3 cheng hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/3-1-3.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">和爽爽坐长江索道</p>
+				</div>
+			</div>
+			<div class="page page-3-4 cheng hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/3-1-4.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">夜晚的洪崖洞，真漂亮，就跟我的爽爽一样</p>
+				</div>
+			</div>
+			<div class="page page-3-5 cheng hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/3-1-5.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">一起吃好吃的</p>
+				</div>
+			</div>
+			<div class="page page-3-6 cheng hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/3-1-6.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">爽爽拍游客照</p>
+				</div>
+			</div>
+			<div class="page page-3-7 cheng hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/3-1-7.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">可爱的爽爷</p>
+				</div>
+			</div>
+			<div class="page page-3-8 cheng hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/3-1-8.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">爽爽给我夹的菜，似乎在暗示什么</p>
+				</div>
+			</div>
+			<div class="page page-3-9 cheng hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/3-1-9.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">离开重庆前的最后一杯奶茶</p>
+				</div>
+			</div>
+			<div class="page page-3-10 cheng hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/3-1-10.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">在重庆吃的最后一顿饭，爽爽吃的可真开心</p>
+				</div>
+			</div>
+			<div class="page page-3-11 cheng hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/3-1-11.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">最后放一张甜蜜的合照吧<br/>~~~///(^v^)\\\~~~</p>
+				</div>
+			</div>
+			<!--青岛之旅-->
+			<div class="page page-4-1 huang hide">
+				<div class="wrap">
+					<img class="img_wording hide pt-page-moveFromRight title" src="img/dongbei.png" />
+					<!--					<img class="img_circle hide pt-page-moveCircle" src="img/circle.png" />-->
+					<img class="img_people hide pt-page-moveFromLeft" src="img/4-1-1.jpg" />
+
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<!--					<img class="img_floating hide pt-page-scaleUp" src="img/floating_develop.png" />-->
+				</div>
+			</div>
+			<div class="page page-4-2 huang hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/4-1-2.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">在公园里面喂小松鼠</p>
+				</div>
+			</div>
+			<div class="page page-4-3 huang hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/4-1-3.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">在黑龙江畔看大妈们跳广场舞，河的对面就是俄罗斯</p>
+				</div>
+			</div>
+			<div class="page page-4-4 huang hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/4-1-4.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">仙女</p>
+				</div>
+			</div>
+			<div class="page page-4-5 huang hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/4-1-5.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">一大片的向日葵，景色可真好啊</p>
+				</div>
+			</div>
+			<div class="page page-4-6 huang hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/4-1-6.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">在俄罗斯的教堂门口拍照</p>
+				</div>
+			</div>
+			<div class="page page-4-7 huang hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/4-1-7.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">正在生闷气的爽爽</p>
+				</div>
+			</div>
+			<div class="page page-4-8 huang hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/4-1-8.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">在俄罗斯住的房间号</p>
+				</div>
+			</div>
+			<div class="page page-4-9 huang hide">
+				<div class="wrap">
+					<img class="img_content hide pt-page-flipInLeft" src="img/4-1-9.jpg" />
+					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />
+					<p class="top-text pt-page-flipInLeft" contenteditable="true">最后，放一张美女和帅哥的自拍</p>
+				</div>
+			</div>
+			<div class="page page-5-1 zi hide">
+				<div class="wrap">
+					<img class="img_wording hide pt-page-moveFromRight title" src="img/xlzs.png" />
+					<!--					<img class="img_circle hide pt-page-moveCircle" src="img/circle.png" />-->
+					<img class="img_people hide pt-page-moveFromLeft" src="img/5-1-2.jpg" />
+
+<!--					<img class="icon_left hide pt-page-moveIconLeft" src="img/icon_left.png" />-->
+					<!--					<img class="img_floating hide pt-page-scaleUp" src="img/floating_develop.png" />-->
+				</div>
+			</div>
+
+
+
+
+		</div>		
+		<div class="play_music" onclick="SwitchPlayMusic()">
+			<audio id="my_audio" src="小宇.mp3" autoplay="autoplay" loop="loop" preload="auto"></audio>
+			<img id="img_play_music" class="img_play_music hide" src="img/play.png" />
+			<img id="img_pause_music" class="img_pause_music hide" src="img/silent.png" />
+		</div>	
+<!--		<script src="http://s11.cnzz.com/stat.php?id=1253893193&web_id=1253893193" language="JavaScript"></script>-->
+	</body>
 </html>
